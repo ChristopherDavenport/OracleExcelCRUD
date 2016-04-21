@@ -22,9 +22,9 @@ End Sub
 #### ECSession:				ECSession
 
 #### ValidSession	 => 		Boolean			
-	Summary: This evaluates the current state of the application and returns a 
-  Boolean Of whether or not you have a validated ECSession Login. Almost Every
-  Operation Requires This So it is a Recommended If Block On Any Command.
+	Summary: This evaluates the current state of the application and returns a   
+  Boolean Of whether or not you have a validated ECSession Login. Almost Every  
+  Operation Requires This So it is a Recommended If Block On Any Command.  
 
 #### ClearTable
 	SheetName:		String
@@ -92,11 +92,11 @@ End Sub
 
 	Summary: This subprocess will removed the entries in it from a table.
 
-	Explanation: This subprocess takes a TableName as the table it will delete
-  entries from that table in our Banner Database. The where clause is populated
-  based on how many primary keys are indicated by values on the left side. 
-  ColorResults Changes whether or not to show success or failure by coloring
-  the far left cell.
+	Explanation: This subprocess takes a TableName as the table it will delete  
+  entries from that table in our Banner Database. The where clause is populated  
+  based on how many primary keys are indicated by values on the left side.   
+  ColorResults Changes whether or not to show success or failure by coloring  
+  the far left cell.  
 
 #### StoredProcedure
 	ProcedureName:	String
