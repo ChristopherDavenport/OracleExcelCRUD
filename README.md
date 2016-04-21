@@ -1,3 +1,23 @@
+# Oracle Excel CRUD Interface
+
+This is a small piece to allow you to insert a table directly into an Oracle database. It uses the column headers as the columns in the table. Primary keys are on the left hand side for matching and presently if you want a numeric value to be a primary key it needs to be saved as a text field(With the Number Stored as Text Tag)
+
+Include This As a Button To Initialize A Session
+```VBA
+Private Sub BtnLogin_Click()
+    frmLogin.Show
+End Sub
+```
+
+This is an example use of the insert command
+```VBA
+Private Sub btnInsert_Click()
+    If ValidSession = True Then
+        ECSession.Insert "SWBWORD", Range("swbword[#All]"), True
+    End If
+End Sub
+```
+
 ## Global Module API
 #### ECSession:				ECSession
 
@@ -12,9 +32,9 @@
 
 ## ECSession Class API
 
-#### Username : 			String
-#### DSN:					String
-#### Validated:				Boolean
+##### Username : 			String
+##### DSN:					String
+##### Validated:				Boolean
 
 #### Initialize
 	Username:			String
