@@ -22,13 +22,16 @@ End Sub
 #### ECSession:				ECSession
 
 #### ValidSession	 => 		Boolean			
-	Summary: This evaluates the current state of the application and returns a Boolean Of whether or not you have a validated ECSession Login. Almost Every Operation Requires This So it is a Recommended If Block On Any Command.
+	Summary: This evaluates the current state of the application and returns a 
+  Boolean Of whether or not you have a validated ECSession Login. Almost Every
+  Operation Requires This So it is a Recommended If Block On Any Command.
 
 #### ClearTable
 	SheetName:		String
 	TableName:			String
 
-	Summary: This Clears a Table Object. It removes any background coloring and resets the range to 1 beneath the headers
+	Summary: This Clears a Table Object. It removes any background coloring and 
+  resets the range to 1 beneath the headers
 
 ## ECSession Class API
 
@@ -41,20 +44,28 @@ End Sub
 	Password:			String
 	DSN:				String
 	
-	Summary: This validates your connection ensuring that you can login and operate in the banner environment. It stores your Username Password, and DSN value for reuse. This is your only way to establish a connection. All values cannot contain single quotes or SQL Comment Strings.
+	Summary: This validates your connection ensuring that you can login and 
+  operate in the banner environment. It stores your Username Password, 
+  and DSN value for reuse. This is your only way to establish a connection.
+  All values cannot contain single quotes or SQL Comment Strings.
 
 #### Reset_Password
 	txtNewPassword1: 	String
 	txtNewPassword2:	String
 
-	Summary: Utilizing an already validated session this will change the users password. Requires that both new password are the same. Passwords cannot contain single quotes or SQL Comment Strings.
+	Summary: Utilizing an already validated session this will change the users 
+  password. Requires that both new password are the same. Passwords cannot 
+  contain single quotes or SQL Comment Strings.
 
 #### Insert
 	TableName:			String
 	Selection:			Range
 	ColorResults:		Boolean [Default = False]
 
-	Summary: This subprocess takes a TableName as the table it will insert the values into. It uses the first row as the columns that it will insert the corresponding values into. ColorResults Changes whether or not to show success or failure by coloring the far left cell.
+	Summary: This subprocess takes a TableName as the table it will insert the 
+  values into. It uses the first row as the columns that it will insert the 
+  corresponding values into. ColorResults Changes whether or not to show 
+  success or failure by coloring the far left cell.
 
 #### Update
 	TableName : 		String
@@ -64,7 +75,14 @@ End Sub
 
 	Summary: The subprocess will update a table.
 
-	Explanation: This subprocess takes a TableName as the table it will update that table in our Banner Database. The first row of the range populates the column names for the table. These must match for the command to succeed. It then loops through all data in the table and generates a Set Clause, and depending on the Number of Primary Keys Entered it will generate that many statement in the where clause, always starting from the leftmost column. ColorResults Changes whether or not to show success or failure by coloring the far left cell.
+	Explanation: This subprocess takes a TableName as the table it will update 
+  that table in our Banner Database. The first row of the range populates the
+  column names for the table. These must match for the command to succeed. It
+  then loops through all data in the table and generates a Set Clause, and 
+  depending on the Number of Primary Keys Entered it will generate that many
+  statement in the where clause, always starting from the leftmost column. 
+  ColorResults Changes whether or not to show success or failure by coloring 
+  the far left cell.
 
 #### Delete
 	TableName: 		String
@@ -74,13 +92,19 @@ End Sub
 
 	Summary: This subprocess will removed the entries in it from a table.
 
-	Explanation: This subprocess takes a TableName as the table it will delete entries from that table in our Banner Database. The where clause is populated based on how many primary keys are indicated by values on the left side. ColorResults Changes whether or not to show success or failure by coloring the far left cell.
+	Explanation: This subprocess takes a TableName as the table it will delete
+  entries from that table in our Banner Database. The where clause is populated
+  based on how many primary keys are indicated by values on the left side. 
+  ColorResults Changes whether or not to show success or failure by coloring
+  the far left cell.
 
 #### StoredProcedure
 	ProcedureName:	String
 	Arguments:			String [Default = “”]
 
-	Summary: This will execute a Stored procedure and has a package body so that you can bring in other elements to execute the procedure if you would like as well.
+	Summary: This will execute a Stored procedure and has a package body so that 
+  you can bring in other elements to execute the procedure if you would like 
+  as well.
 
 
 #### UpdateHardCode
@@ -97,4 +121,5 @@ End Sub
 	TableName: 		String
 	WhereStatement:	String
 
-	Summary: This subprocess deletes entries from a table based on an arbitrary Where statement.
+	Summary: This subprocess deletes entries from a table based on an arbitrary 
+  Where statement.
