@@ -22,16 +22,20 @@ End Sub
 #### ECSession:				ECSession
 
 #### ValidSession	 => 		Boolean			
+```
 	Summary: This evaluates the current state of the application and returns a   
   Boolean Of whether or not you have a validated ECSession Login. Almost Every  
   Operation Requires This So it is a Recommended If Block On Any Command.  
+```
 
 #### ClearTable
+```
 	SheetName:		String
 	TableName:			String
 
 	Summary: This Clears a Table Object. It removes any background coloring and 
   resets the range to 1 beneath the headers
+```
 
 ## ECSession Class API
 
@@ -40,6 +44,7 @@ End Sub
 ##### Validated:				Boolean
 
 #### Initialize
+```
 	Username:			String
 	Password:			String
 	DSN:				String
@@ -48,16 +53,18 @@ End Sub
   operate in the banner environment. It stores your Username Password, 
   and DSN value for reuse. This is your only way to establish a connection.
   All values cannot contain single quotes or SQL Comment Strings.
-
+```
 #### Reset_Password
+```
 	txtNewPassword1: 	String
 	txtNewPassword2:	String
 
 	Summary: Utilizing an already validated session this will change the users 
   password. Requires that both new password are the same. Passwords cannot 
   contain single quotes or SQL Comment Strings.
-
+```
 #### Insert
+```
 	TableName:			String
 	Selection:			Range
 	ColorResults:		Boolean [Default = False]
@@ -66,8 +73,9 @@ End Sub
   values into. It uses the first row as the columns that it will insert the 
   corresponding values into. ColorResults Changes whether or not to show 
   success or failure by coloring the far left cell.
-
+```
 #### Update
+```
 	TableName : 		String
 	Selection: 			Range
 	PrimaryKeys:		Integer [Default = 1]
@@ -83,8 +91,9 @@ End Sub
   statement in the where clause, always starting from the leftmost column. 
   ColorResults Changes whether or not to show success or failure by coloring 
   the far left cell.
-
+```
 #### Delete
+```
 	TableName: 		String
 	Selection:			Range
 	PrimaryKeys:		Integer [Default = 1]
@@ -97,17 +106,18 @@ End Sub
   based on how many primary keys are indicated by values on the left side.   
   ColorResults Changes whether or not to show success or failure by coloring  
   the far left cell.  
-
+```
 #### StoredProcedure
+```
 	ProcedureName:	String
 	Arguments:			String [Default = “”]
 
 	Summary: This will execute a Stored procedure and has a package body so that 
   you can bring in other elements to execute the procedure if you would like 
   as well.
-
-
+```
 #### UpdateHardCode
+```
 	TableName:			String
 	SetStatement:		String
 	WhereStatement:	String
@@ -115,11 +125,12 @@ End Sub
 	Summary: This subprocess updates a table based on an arbitrary update command. 
 
 	Explanation: 
-
-
+```
 #### DeleteHardCode
+```
 	TableName: 		String
 	WhereStatement:	String
 
 	Summary: This subprocess deletes entries from a table based on an arbitrary 
   Where statement.
+```
