@@ -18,7 +18,7 @@ Private Sub btnInsert_Click()
 End Sub
 ```
 
-## Global Module API
+## Global Module API - ECGeneral.bas
 #### ECSession:				ECSession
 
 #### ValidSession	 => 		Boolean			
@@ -37,7 +37,7 @@ End Sub
   resets the range to 1 beneath the headers
 ```
 
-## ECSession Class API
+## ECSession Class API - ECSession.cls
 
 ##### Username : 			String
 ##### DSN:					String
@@ -110,7 +110,7 @@ End Sub
 #### StoredProcedure
 ```
 	ProcedureName:	String
-	Arguments:			String [Default = ìî]
+	Arguments:			String [Default = ‚Äú‚Äù]
 
 	Summary: This will execute a Stored procedure and has a package body so that 
   you can bring in other elements to execute the procedure if you would like 
